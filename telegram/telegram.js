@@ -5,7 +5,7 @@ const { chunk } = require('../common/string');
 const BASE_URL = 'https://api.telegram.org';
 
 const curried = (queue) =>
-  curry(async (delay, botToken, chatId, message) => {
+  curry(async (botToken, chatId, message) => {
     const url = `${BASE_URL}/bot${botToken}/sendMessage?chat_id=${chatId}`;
     const messages = chunk(message, 4096);
     const result = [];
@@ -18,7 +18,7 @@ const curried = (queue) =>
   });
 
 const bot = ({ delay, token }) =>
-  curried(new AsyncQueue({ delay: delay ?? 0 }))(delay)(token);
+  curried(new AsyncQueue({ delay: delay ?? 0 }))(token);
 const chatBot = ({ token, delay, chatId }) => bot({ delay, token })(chatId);
 const sendMessage = ({ token, delay, chatId, message }) =>
   chatBot({ token, delay, chatId })(message);
