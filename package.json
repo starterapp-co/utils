@@ -1,0 +1,32 @@
+{
+  "name": "utils",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "node */test/*.spec.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/starterapp-co/utils.git"
+  },
+  "keywords": [
+    "queue",
+    "async queue"
+  ],
+  "author": "starterapp-co",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/starterapp-co/utils/issues"
+  },
+  "devDependencies": {
+    "@types/node": "^20.4.4",
+    "eslint": "^8.45.0",
+    "eslint-config-prettier": "^8.6.0",
+    "eslint-plugin-import": "^2.23.4",
+    "eslint-plugin-prettier": "^5.0.0",
+    "prettier": "^3.0.0",
+    "typescript": "^5.1.6"
+  },
+  "homepage": "https://github.com/starterapp-co/utils#readme"
+}
