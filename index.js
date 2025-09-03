@@ -1,5 +1,5 @@
 const { init } = require('./entrypoint/als-entrypoint');
-const { als } = require('./fn');
+const { als } = require('./als');
 const { getLogger } = require('./logger/console-logger');
 
 const entrypoint = init(als);

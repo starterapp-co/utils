@@ -1,5 +1,5 @@
 const { provide } = require('./als-logger');
-const { als } = require('../fn');
+const { als } = require('../als');
 const { randomUUID } = require('node:crypto');
 
 class NewLogger {
